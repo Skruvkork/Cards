@@ -2,3 +2,8 @@
     display: flex;
     justify-content: center;
 }
+
+.player1 .hand {
+    position: relative;
+    bottom: -70px;
+}

@@ -12,4 +12,5 @@ function init() {
 
     const screen = document.getElementById('game');
     screen.innerHTML = game.render();
+    game.bindEvents();
 }

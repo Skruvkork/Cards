@@ -1,0 +1,29 @@
+.player-area {
+	position: relative;
+}
+
+.mana-tray {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	bottom: 0;
+	right: 0;
+	height: 20px;
+	width: 288px;
+	background-color: gray;
+	border-radius: 20px;
+	padding: 4px;
+}
+
+.mana-counter {
+	background-color: blue;
+	color: #fff;
+	border-radius: 20px;
+	padding: 5px;
+	font-size: 13px;
+}
+
+.player2 .mana-tray {
+	top: 0;
+}

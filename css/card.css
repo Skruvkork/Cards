@@ -1,5 +1,17 @@
 .card {
+    transition: transform 0.4s;
+    position: relative;
     width: 130px;
     height: 220px;
     border: 1px solid red;
+    font-size: 13px;
+}
+
+.card-image {
+    height: 100px;
+    background-color: gray;
+}
+
+.player1 .card:hover {
+    transform: translateY(-70px)
 }

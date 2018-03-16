@@ -7,6 +7,11 @@ class Game {
     }
 
 
+    bindEvents() {
+        this.player1.hand.cards.forEach(card => card.bindEvents());
+    }
+
+
     startGame() {
 
         this.player1.deck.randomize();
@@ -22,6 +27,8 @@ class Game {
         this.activePlayer = this.decideStartingPlayer(this.player1, this.player2);
 
         this.activePlayer.startTurn();
+
+        this.render();
     }
 
     startTurn() {
@@ -34,13 +41,13 @@ class Game {
     }
 
     render() {
-        return `<div>${this.player2.hero.render()}</div>
-                <div>${this.player2.render()}</div>
+        return `<div class="player2">${this.player2.render()}</div>
+                <div class="hero-area">${this.player2.hero.render()}</div>
                 <div class="board">
                     ${this.player2.board.map(card => card.render())}
                     ${this.player1.board.map(card => card.render())}
                 </div>
-                <div>${this.player1.render()}</div>
-                <div>${this.player1.hero.render()}</div>`;
+                <div class="hero-area">${this.player1.hero.render()}</div>
+                <div class="player1">${this.player1.render()}</div>`;
     }
 }

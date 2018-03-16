@@ -9,8 +9,12 @@ class Hand {
     }
 
 
+    removeCard(card) {
+        this.cards = this.cards.filter(c => c.name != card.name);
+    }
+
+
     render() {
-        console.log(this.cards)
         return `<div class="hand">
                     ${this.cards.map(card => card.render()).join('')}
                 </div>`

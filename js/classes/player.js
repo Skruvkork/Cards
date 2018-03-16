@@ -42,7 +42,22 @@ class Player {
     }
 
 
+    playCard(card) {
+        
+    } 
+
+
     render() {
-        return `<div>${this.hand.render()}</div>`;
+        return `<div class="player-area">${this.hand.render()}
+                    <div class="mana-tray">
+                        <div class="mana-counter">${this.mana}/10</div>
+                        ${Array(this.mana).fill(1).map(crystal => {
+                            return '<div class="mana mana-crystal"></div>';
+                        }).join()}
+                        ${Array(10 - this.mana).fill(1).map(crystal => {
+                            return '<div class="mana mana-crystal empty"></div>';
+                        }).join('')}
+                    </div>
+                </div>`;
     }
 }

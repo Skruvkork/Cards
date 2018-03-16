@@ -46,6 +46,7 @@ class Hero {
 
     render() {
         return `<div class="hero">
+                    <div class="hero-image"></div>
                     <span class="attack">${this.attack}</span>
                     <span class="hp">${this.hp}</span>
                 </div>`;

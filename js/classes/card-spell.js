@@ -6,7 +6,7 @@ class Spell extends Card {
 
 
     render() {
-        return `<div class="card">
+        return `<div class="card" id="${this.id}">
                     <span class="mana-cost">${this.cost}</span>
                     <div class="card-image"></div>
                     <p class="card-name">${this.name}</p>

@@ -1,0 +1,14 @@
+.hero-area {
+	display: flex;
+	justify-content: center;
+}
+
+.hero {
+
+}
+
+.hero-image {
+	height: 100px;
+	width: 100px;
+	background-color: gray;
+}
